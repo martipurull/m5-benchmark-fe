@@ -1,7 +1,7 @@
-export const movies = async (query) => {
+export const movies = async () => {
   try {
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${query}&type=series`
+      `${ process.env.REACT_APP_URL }/media`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch");
