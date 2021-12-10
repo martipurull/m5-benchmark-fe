@@ -43,7 +43,14 @@ const MoviesCarousel = ({ galleryTitle }) => {
         <Carousel>
           <Carousel.Item>
             <Row>
-              {movies.slice(0, 5).map((m) => (
+              {movies.slice(0, 6).map((m) => (
+                <SingleMovie key={m.id} movieObj={m} />
+              ))}
+            </Row>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Row>
+              {movies.slice(6, 12).map((m) => (
                 <SingleMovie key={m.id} movieObj={m} />
               ))}
             </Row>
